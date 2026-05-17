@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Inteligente de Obras</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero-card">
+      <div class="hero-content">
+        <p class="eyebrow">Etapa Intermediária • API pública • Deploy</p>
+        <h1>Calculadora Inteligente de Obras</h1>
+        <p class="description">
+          Uma aplicação web para apoiar pequenos profissionais e clientes no planejamento inicial de obras,
+          calculando materiais e buscando automaticamente o endereço da obra por CEP.
+        </p>
+      </div>
+
+      <div class="status-panel">
+        <span class="status-dot"></span>
+        Sistema web com integração ViaCEP
+      </div>
+    </section>
+
+    <section class="app-grid">
+      <form class="glass-card form-card" id="obraForm">
+        <h2>Dados da parede</h2>
+        <p>Informe as medidas e o CEP da obra para gerar uma estimativa inicial.</p>
+
+        <div class="field-group">
+          <label for="largura">Largura da parede em metros</label>
+          <input id="largura" type="number" min="0" step="0.01" placeholder="Exemplo: 5" required />
+        </div>
+
+        <div class="field-group">
+          <label for="altura">Altura da parede em metros</label>
+          <input id="altura" type="number" min="0" step="0.01" placeholder="Exemplo: 2.8" required />
+        </div>
+
+        <div class="field-group">
+          <label for="cep">CEP da obra</label>
+          <input id="cep" type="text" maxlength="9" placeholder="Exemplo: 70040900" required />
+        </div>
+
+        <div class="button-row">
+          <button type="submit" class="primary-button">Calcular projeto</button>
+          <button type="button" class="ghost-button" id="limparBtn">Limpar</button>
+        </div>
+      </form>
+
+      <section class="glass-card result-card">
+        <h2>Resultado técnico</h2>
+        <div class="metrics">
+          <article>
+            <span>Área total</span>
+            <strong id="areaResultado">0 m²</strong>
+          </article>
+          <article>
+            <span>Tijolos estimados</span>
+            <strong id="tijolosResultado">0</strong>
+          </article>
+          <article>
+            <span>Com margem de perda</span>
+            <strong id="perdaResultado">0</strong>
+          </article>
+        </div>
+
+        <div class="address-box" id="enderecoResultado">
+          O endereço será exibido após a consulta do CEP na API ViaCEP.
+        </div>
+      </section>
+    </section>
+
+    <section class="info-section">
+      <article class="info-card">
+        <h3>Dor real atendida</h3>
+        <p>
+          A aplicação ajuda no planejamento básico de obras, reduzindo erros de cálculo e agilizando o preenchimento
+          de endereço por meio de uma API pública.
+        </p>
+      </article>
+      <article class="info-card">
+        <h3>API utilizada</h3>
+        <p>
+          A integração usa a API ViaCEP para consultar logradouro, bairro, cidade e UF a partir do CEP informado.
+        </p>
+      </article>
+      <article class="info-card">
+        <h3>Entrega contínua</h3>
+        <p>
+          O projeto contém teste automatizado e workflow de GitHub Actions para validar o fluxo antes da entrega.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
