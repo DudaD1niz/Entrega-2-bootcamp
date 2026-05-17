@@ -1,7 +1,4 @@
 # Calculadora Inteligente de Obras
-
-**Link do Deploy:** coloque aqui o link publicado no GitHub Pages, Vercel ou Netlify.
-
 ## Visão geral
 
 A Calculadora Inteligente de Obras é uma aplicação web simples, moderna e responsiva criada para apoiar o planejamento inicial de pequenas obras. O sistema calcula a área de uma parede, estima a quantidade de tijolos necessários e adiciona uma margem de perda de 10%.
@@ -72,7 +69,7 @@ v1.1.0
 ## Entrega intermediária
 
 Esta etapa adiciona:
-
+- Projeto com integação da API ViaCEP
 - Issue documentada no GitHub.
 - Branch obrigatória `entrega-intermediaria`.
 - Integração com API pública.
