@@ -1,6 +1,6 @@
 # Calculadora Inteligente de Obras
 
-**Link do Deploy:** coloque aqui o link publicado no GitHub Pages, Vercel ou Netlify.
+
 
 ## Visão geral
 
